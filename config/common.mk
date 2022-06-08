@@ -71,7 +71,7 @@ endif
 
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+    $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 endif
 ifeq ($(BUILD_WITH_PIXEL_GAPPS), true)
     $(call inherit-product, vendor/gms/common/common-vendor.mk)
